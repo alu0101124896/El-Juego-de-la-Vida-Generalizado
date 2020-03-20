@@ -13,7 +13,7 @@ int Cell3::get_state() const { return 3; }
 
 int Cell3::update_state(Board& board) {
   if ((get_neighbours() == 1) || (get_neighbours() == 5)) {
-    return 3;
+    return get_state();
   } else {
     return 0;
   }

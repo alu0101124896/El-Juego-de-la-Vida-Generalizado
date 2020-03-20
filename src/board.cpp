@@ -31,9 +31,8 @@ Cell *Board::get_cell(int i, int j) { return grid.at(i).at(j); }
 Cell *Board::get_cell(int i, int j) const { return grid.at(i).at(j); }
 
 void Board::set_cell(int i, int j, int k) {
-  Cell* prev = grid.at(i).at(j);
-  grid.at(i).at(j) = grid.at(i).at(j)->create_cell(i, j, k);
-  delete prev;
+  delete grid.at(i).at(j);
+  grid.at(i).at(j) = Cell::create_cell(i, j, k);
 }
 
 void Board::increment_population() { population++; }

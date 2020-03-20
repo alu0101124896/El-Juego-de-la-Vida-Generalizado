@@ -7,15 +7,13 @@
 
 Cell1::Cell1() {}
 
-Cell1::Cell1(int i, int j) {
-  set_i_j(i, j);
-}
+Cell1::Cell1(int i, int j) { set_i_j(i, j); }
 
 int Cell1::get_state() const { return 1; }
 
 int Cell1::update_state(Board& board) {
   if ((get_neighbours() == 2) || (get_neighbours() == 3)) {
-    return 1;
+    return get_state();
   } else {
     return 0;
   }

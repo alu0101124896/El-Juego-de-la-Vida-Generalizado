@@ -82,10 +82,4 @@ int Cell::update_state(Board& board) {
   }
 }
 
-std::ostream& Cell::print_state(std::ostream& os) const {
-  if (get_state() != 0) {
-    return os << get_state();
-  } else {
-    return os << ' ';
-  }
-}
+std::ostream& Cell::print_state(std::ostream& os) const { return os << ' '; }

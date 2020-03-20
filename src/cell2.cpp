@@ -14,7 +14,7 @@ int Cell2::get_state() const { return 2; }
 int Cell2::update_state(Board& board) {
   if ((get_neighbours() == 2) || (get_neighbours() == 4) ||
       (get_neighbours() == 5)) {
-    return 2;
+    return get_state();
   } else {
     return 0;
   }
