@@ -16,6 +16,7 @@ int Cell2::update_state(Board& board) {
       (get_neighbours() == 5)) {
     return get_state();
   } else {
+    board.decrement_population();
     return 0;
   }
 }

@@ -70,12 +70,15 @@ void Cell::count_neighbours(const Board& board) {
 
 int Cell::update_state(Board& board) {
   if (get_neighbours() == 3) {
+    board.increment_population();
     return 1;
   } else if ((get_neighbours() == 3) || (get_neighbours() == 6) ||
              (get_neighbours() == 8)) {
+    board.increment_population();
     return 2;
   } else if ((get_neighbours() == 3) || (get_neighbours() == 4) ||
              (get_neighbours() == 6)) {
+    board.increment_population();
     return 3;
   } else {
     return 0;
