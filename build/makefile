@@ -1,7 +1,7 @@
 CC = g++
 CXXFLAGS = -g
 
-OBJS = ../src/cell.o ../src/cell1.o ../src/cell2.o ../src/cell3.o ../src/board.o ../src/main.o
+OBJS = ../src/cell.o ../src/cell1.o ../src/cell2.o ../src/cell3.o ../src/cellX.o ../src/board.o ../src/main.o
 
 all: ${OBJS}
 	$(CC) $(CXXFLAGS) -o game_of_life ${OBJS}
