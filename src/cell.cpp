@@ -6,6 +6,7 @@
 #include "../include/cell1.hpp"
 #include "../include/cell2.hpp"
 #include "../include/cell3.hpp"
+#include "../include/cellX.hpp"
 
 Cell::Cell() {}
 
@@ -22,6 +23,8 @@ Cell* Cell::create_cell(int i, int j, int k) {
       return new Cell2(i, j);
     case 3:
       return new Cell3(i, j);
+    case 4:
+      return new CellX(i, j);
     default:
       return new Cell(i, j);
   }
@@ -80,6 +83,9 @@ int Cell::update_state(Board& board) {
              (get_neighbours() == 6)) {
     board.increment_population();
     return 3;
+  } else if (get_neighbours() == 1) {
+    board.increment_population();
+    return 4;
   } else {
     return 0;
   }

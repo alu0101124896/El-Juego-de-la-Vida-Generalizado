@@ -29,7 +29,7 @@ int main() {
     std::cin >> i_pos;
     std::cout << "j: ";
     std::cin >> j_pos;
-    std::cout << "Tipo de celula: ";
+    std::cout << "Tipo de celula (1, 2, 3 o 4(X)): ";
     std::cin >> initial_state;
 
     board.set_cell(i_pos, j_pos, initial_state);
